@@ -19,8 +19,9 @@
 
       <!--Password Length requirement  -->
       <label for="passLength">Desired Password Length</label>
-      <div class="col-1">
-        <input type="number" id="length" class="form-control" value="1" min="8" max="128" required>
+      <div class="col-10">
+        <input type="range" id="slider" class="form-control" value="10" min="1" max="50">
+        <input type="number" id="passLength" value="10" min="1" max="50">
       </div>
 
       <!-- Checkboxes for character criteria -->
