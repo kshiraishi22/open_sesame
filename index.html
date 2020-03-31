@@ -12,56 +12,69 @@
 
   </head>
   <body>
-    <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="card firstCard">
+          <div class="card-body">
       <header>
-        <h1>Password Generator</h1>
+        <h1>Generate a Secure Password</h1>
+        <p>Instantly create a secure password below!</p>
       </header>
-
-      <!--Password Length requirement  -->
+          <!--Password Length requirement  -->
       <label for="passLength">Desired Password Length</label>
-      <div class="col-10">
-        <input type="range" id="slider" class="form-control" value="10" min="1" max="50">
-        <input type="number" id="passLength" value="10" min="1" max="50">
-      </div>
+      <div class="row">
+        <div class="col-1">
+            <input type="number" id="passLength" value="10" min="1" max="50">
+          </div>
+        <div class="col-11">
+          <input type="range" id="slider" class="form-control" value="10" min="1" max="50">
+        </div>
+      </div>  
 
-      <!-- Checkboxes for character criteria -->
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="lowerCase" value="option1">
-          <label class="form-check-label" for="lowerCase">Lower Case Characters</label>
-      </div>
+          <!-- Checkboxes for character criteria -->
+        <div class="checkbox">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="lowerCase" value="option1">
+              <label class="form-check-label" for="lowerCase">Lower Case Characters</label>
+          </div>
 
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="upperCase" value="option1">
-          <label class="form-check-label" for="upperCase">Upper Case Characters</label>
-      </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="upperCase" value="option1">
+              <label class="form-check-label" for="upperCase">Upper Case Characters</label>
+          </div>
 
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="numbers" value="option1">
-          <label class="form-check-label" for="numbers">Numbers</label>
-      </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="numbers" value="option1">
+              <label class="form-check-label" for="numbers">Numbers</label>
+          </div>
 
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="specialCharacters" value="option1">
-          <label class="form-check-label" for="specialCharacters">Special Characters</label>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="specialCharacters" value="option1">
+              <label class="form-check-label" for="specialCharacters">Special Characters</label>
+          </div>
+        </div>
       </div>
-      
+      </div>
+      </div>
       <!-- Textbox for generated password -->
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
+      <div class="container">
+        <div class="row">
+          <div class="card secondCard">
+            <div class="card-body">
+              <input
+                readonly
+                id="password"
+                class="password-display"
+                min="1" max="50"
+                aria-label="Generated Password"
+              ></input>
+            </div>
         <div class="card-footer">
           <button id="generate" type="button" class="btn btn-primary">Generate Password</button>
+          <button id="copy" type="button" class="btn btn-warning">Copy to Clipboard</button>
         </div>
       </div>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>

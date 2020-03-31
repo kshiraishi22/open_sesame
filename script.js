@@ -14,6 +14,7 @@ var passwordEl = document.getElementById("password");
 var generateBtn = document.getElementById("generate");
 var slider = document.getElementById("slider");
 var passLength = document.getElementById("passLength");
+var copyBtn = document.getElementById("copy");
 
 // Syncing Password Length Input and Slider
 slider.addEventListener("input", syncInputSlider);
@@ -71,4 +72,11 @@ function generatePassword(length, charInventory) {
 return newPassword;
 }
 
+function copyPassword() {
+  document.getElementById("password").select();
+  document.execCommand("Copy");
+  alert("Password has been copied to Clipboard!");
+}
+
+copyBtn.addEventListener("click", copyPassword);
 
