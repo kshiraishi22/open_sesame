@@ -3,7 +3,7 @@ A simple and easy tool to generate a secure password.
 
 # Description
 
-![alt text](./images/password_generator.png "Title")
+![alt text](./gif/open_sesame.gif "Title")
 
 This is an application that generates a random password based on user-selected criteria. 
 
